@@ -1,0 +1,213 @@
+<!-- Path: plano.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plano de Ensino - Desenvolvimento Web Moderno</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+      }
+
+      .collapsible {
+        background-color: #777;
+        color: white;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+      }
+
+      .active,
+      .collapsible:hover {
+        background-color: #555;
+      }
+
+      .collapsible:after {
+        content: "\002B";
+        color: white;
+        font-weight: bold;
+        float: right;
+        margin-left: 5px;
+      }
+
+      .active:after {
+        content: "\2212";
+      }
+
+      .content {
+        padding: 0 18px;
+        background-color: #f1f1f1;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+      }
+
+      section {
+        margin-top: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #eee;
+      }
+      
+      .section-content {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      .section-content li {
+        flex: 1;
+        min-width: 250px; /* Adjust as needed for your minimum column width */
+        margin-right: 20px; /* Adjust spacing between columns */
+      }
+
+      .section-content li:last-child {
+        margin-right: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Plano de Ensino - Desenvolvimento Web Moderno</h1>
+    </header>
+
+    <main>
+      <button class="collapsible">Módulo Fundamental</button>
+      <div class="content">
+        <section>
+          <h2>Módulo Fundamental</h2>
+          <ul class="section-content">
+            <li>
+              <h3>HTML</h3>
+              <p>Estrutura básica</p>
+              <p>Tags fundamentais</p>
+              <p>Formulários básicos</p>
+              <p>Semântica HTML5</p>
+            </li>
+            <li>
+              <h3>CSS</h3>
+              <p>Introdução ao CSS</p>
+              <p>Seletores CSS</p>
+              <p>Propriedades de estilo básicas</p>
+              <p>Layouts simples</p>
+            </li>
+            <li>
+              <h3>JavaScript (JS)</h3>
+              <p>Introdução ao JavaScript</p>
+              <p>Variáveis e tipos de dados</p>
+              <p>Operadores</p>
+              <p>Estruturas de controle</p>
+              <p>Funções</p>
+              <p>Manipulação do DOM básica</p>
+            </li>
+          </ul>
+        </section>
+      </div>
+
+      <button class="collapsible">Módulo Intermediário</button>
+      <div class="content">
+        <section>
+          <h2>Módulo Intermediário</h2>
+          <ul class="section-content">
+            <li>
+              <h3>Node.js</h3>
+              <p>Introdução ao Node.js</p>
+              <p>Módulos do Node.js</p>
+              <p>NPM (Node Package Manager)</p>
+            </li>
+            <li>
+              <h3>Banco de Dados e Modelagem</h3>
+              <p>Introdução a banco de dados relacionais e não relacionais</p>
+              <p>SQL e NoSQL</p>
+              <p>Modelagem de dados</p>
+            </li>
+            <li>
+              <h3>React</h3>
+              <p>Introdução ao React</p>
+              <p>Componentes em React</p>
+              <p>Props e estado</p>
+              <p>Ciclo de vida de um componente</p>
+            </li>
+            <li>
+              <h3>Material-UI</h3>
+              <p>Introdução ao Material-UI</p>
+              <p>
+                Utilização de componentes do Material-UI em aplicações React
+              </p>
+            </li>
+          </ul>
+        </section>
+      </div>
+
+      <button class="collapsible">Módulo Avançado</button>
+      <div class="content">
+        <section>
+          <h2>Módulo Avançado</h2>
+          <ul class="section-content">
+            <li>
+              <h3>Docker</h3>
+              <p>Introdução ao Docker</p>
+              <p>Dockerfile e docker-compose</p>
+              <p>Gerenciamento de contêineres</p>
+            </li>
+            <li>
+              <h3>Electron</h3>
+              <p>Introdução ao Electron</p>
+              <p>Construção de aplicativos desktop com Electron</p>
+            </li>
+            <li>
+              <h3>Swagger</h3>
+              <p>Introdução ao Swagger</p>
+              <p>Documentação de APIs com Swagger</p>
+            </li>
+            <li>
+              <h3>Jest</h3>
+              <p>Introdução ao Jest</p>
+              <p>Testes unitários em aplicações Node.js e React</p>
+            </li>
+            <li>
+              <h3>Banco de Dados Avançado</h3>
+              <p>Escalabilidade e otimização de bancos de dados</p>
+              <p>Modelagem avançada de dados</p>
+              <p>Integração de banco de dados com Node.js e React</p>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <p>© 2024 - Desenvolvimento Web Moderno</p>
+    </footer>
+
+    <script>
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
+
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.maxHeight) {
+            content.style.maxHeight = null;
+          } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
