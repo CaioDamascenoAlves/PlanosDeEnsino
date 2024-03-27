@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projeto de Desenvolvimento</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh; /* Para ocupar toda a altura da viewport */
+      }
+
+      header {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+      }
+
+      footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
+        margin-top: auto; /* Coloca o footer no final da página */
+      }
+
+      .collapsible {
+        background-color: #b6bdd6;
+        color: black;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+      }
+
+      .active,
+      .collapsible:hover {
+        background-color: #555;
+      }
+
+      .collapsible:after {
+        content: "\002B";
+        color: white;
+        font-weight: bold;
+        float: right;
+        margin-left: 5px;
+      }
+
+      .active:after {
+        content: "\2212";
+      }
+
+      .content {
+        padding: 0 18px;
+        background-color: #f1f1f1;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+      }
+
+      section {
+        margin-top: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #eee;
+      }
+
+      .section-content {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      .section-content li {
+        flex: 1;
+        min-width: 250px; /* Adjust as needed for your minimum column width */
+        margin-right: 20px; /* Adjust spacing between columns */
+      }
+
+      .section-content li:last-child {
+        margin-right: 0;
+      }
+
+      img {
+        width: 30px;
+        height: 30px;
+        vertical-align: middle;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Projeto: Migração da planilha Excel <img src="assets/excel.png" alt="Ícone do Excel"> para o Tableau <img src="assets/Tableau Software.svg" alt="Ícone do Tableau"></h1>
+    </header>
+    
+
+    <main>
+      <button class="collapsible">Primeira Etapa: Projeto de Automação <img src="assets/automation.png" alt="Ícone Automação"></button>
+      <div class="content">
+        <section>
+          <ul class="section-content">
+            <li>
+              <h3>Projeto de Automação no site Vibra <img src="assets/vibra.png" alt="Ícone Vibra"></h3>
+              <p>Coleta de preços <img src="assets/coleta-de-dados.png" alt="Ícone Coleta de dados"></p>
+              <p>Envio do relatório por e-mail <img src="assets/outlook.png" alt="Outlook"></p>
+              <p>Agendamento diário da automação e do envio do relatório <img src="assets/cronograma.png" alt="Agendamento"></p>
+            </li>
+          </ul>
+        </section>
+      </div>
+
+      <button class="collapsible">
+        Segunda Etapa: Construção do Sistema Web <img src="assets/sys.png" alt="sys">
+      </button>
+      <div class="content">
+        <section>
+          <ul class="section-content">
+            <li>
+              <h3>
+                Construção do Sistema Web para coleta de preço dos Concorrentes
+              </h3>
+              <h4>Documentação Interativa <img src="assets/api.png" alt="ApiDocs">:</h4>
+              <p>
+                Acesso interno:
+                <a href="http://192.168.0.240:3000/api-docs"
+                  >http://192.168.0.240:3000/api-docs</a
+                >
+              </p>
+              <p>
+                Acesso externo:
+                <a href="http://189.90.241.82:3000/api-docs"
+                  >http://189.90.241.82:3000/api-docs</a
+                >
+              </p>
+              <h4>Aplicação <img src="assets/aplicacao.png" alt="app">:</h4>
+              <p>
+                Acesso interno:
+                <a href="http://192.168.0.240:5173/internal"
+                  >http://192.168.0.240:5173/internal</a
+                >
+              </p>
+              <p>
+                Acesso externo:
+                <a href="http://189.90.241.82:5172/prod"
+                  >http://189.90.241.82:5172/prod</a
+                >
+              </p>
+              <p>
+                Para mais detalhes por favor solicite via email:
+                <a href="mailto:desenvolvimento@rgpneus.com.br"
+                  >desenvolvimento@rgpneus.com.br</a
+                >
+              </p>
+            </li>
+          </ul>
+        </section>
+      </div>
+
+      <button class="collapsible">
+        Terceira Etapa: Modelagem do Banco de Dados <img src="assets/gerenciamento-de-banco-de-dados.png" alt="bd">
+      </button>
+      <div class="content">
+        <section>
+          <h2>Terceira Etapa: Modelagem do Banco de Dados</h2>
+          <ul class="section-content">
+            <li>
+              <h3>Modelagem do Banco de Dados (Data Warehouse)</h3>
+              <p>Consultas unidas:</p>
+              <p>- Preço na Bomba</p>
+              <p>- Custo Vibra</p>
+              <p>- Preço dos Concorrentes</p>
+              <p>- Custo Médio Ponderado</p>
+              <h3>Agendamento e automação do Data Warehouse</h3>
+            </li>
+          </ul>
+        </section>
+      </div>
+
+      <button class="collapsible">Quarta Etapa: Migração para o Tableau</button>
+      <div class="content">
+        <section>
+          <h2>Quarta Etapa: Migração para o Tableau</h2>
+          <ul class="section-content">
+            <li>
+              <h3>Migrar Planilha de Desvios para o Tableau</h3>
+              <p>
+                Painel Análise geral de Preços (Custo Vibra, Preço Bomba e Lucro
+                Bruto)
+              </p>
+              <p>Painel de Custos Gerais</p>
+              <p>Painel do Mercado JM</p>
+              <p>Painel do Mercado ITA</p>
+              <p>Painel do Mercado SDP</p>
+              <p>Painel do Mercado SG</p>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <p>© 2024 - Desenvolvimento</p>
+    </footer>
+
+    <script>
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
+
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.maxHeight) {
+            content.style.maxHeight = null;
+          } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
